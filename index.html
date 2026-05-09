@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shelf Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="grain"></div>
+
   <header>
     <nav>
-      <a href="/" class="logo">Shelf Engineering</a>
+      <a href="/" class="logo">
+        <span class="logo-mark">//</span> Shelf Engineering
+      </a>
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -20,37 +27,67 @@
 
   <main>
     <section class="hero">
-      <h1>Shelf Engineering</h1>
-      <p>Building things that matter.</p>
+      <div class="hero-label">Engineering Studio</div>
+      <h1>Ideas off<br>the shelf.</h1>
+      <p>Research, data, and builds — shipped from the workbench.</p>
+      <div class="hero-line"></div>
     </section>
 
     <section id="projects" class="projects">
-      <h2>Projects</h2>
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>Projects</h2>
+      </div>
       <div class="project-grid">
-        <!-- Add new projects by copying this block -->
-        <a href="#" class="project-card">
-          <h3>Coming Soon</h3>
-          <p>First project in the works.</p>
-          <span class="tag">In Progress</span>
+        <a href="/llm-adoption/" class="project-card fade-in">
+          <div class="card-top">
+            <span class="card-status">Live</span>
+            <span class="card-tag">Research</span>
+          </div>
+          <h3>LLM Adoption Is Exploding</h3>
+          <p>Data, charts, and citations showing how fast large language models are being adopted across every industry.</p>
+          <div class="card-footer">
+            <span class="card-arrow">&rarr;</span>
+          </div>
         </a>
-        <!--
-        <a href="/project-name/" class="project-card">
-          <h3>Project Name</h3>
-          <p>Short description of the project.</p>
-          <span class="tag">Category</span>
+        <a href="https://behaviourbook.shelfengineering.com" class="project-card fade-in">
+          <div class="card-top">
+            <span class="card-status">Live</span>
+            <span class="card-tag">Education</span>
+          </div>
+          <h3>Behaviour Book</h3>
+          <p>Free, private behaviour tracking for Australian primary school teachers. Log behaviour in 10 seconds, spot patterns, get evidence-based next steps.</p>
+          <div class="card-footer">
+            <span class="card-arrow">&rarr;</span>
+          </div>
         </a>
-        -->
       </div>
     </section>
 
     <section id="about" class="about">
-      <h2>About</h2>
-      <p>Shelf Engineering is where ideas get built. Each project lives on its own page — explore above to see what's in progress.</p>
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-content">
+        <p>Shelf Engineering is where ideas get built. Each project lives on its own page with its own data, code, and story. Explore above to see what's shipping.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Shelf Engineering</p>
+    <div class="footer-inner">
+      <span class="footer-logo"><span class="logo-mark">//</span> SE</span>
+      <span>&copy; 2026 Shelf Engineering</span>
+    </div>
   </footer>
+
+  <script>
+    // Scroll-triggered fade-in
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>

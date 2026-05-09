@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Adoption Is Exploding — Shelf Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="llm-adoption.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <span class="logo-mark">//</span> Shelf Engineering
+      </a>
+      <div class="nav-links">
+        <a href="/#projects">Projects</a>
+        <a href="/#about">About</a>
+        <a href="mailto:nicolas@shelfengineering.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-label">Research &mdash; May 2026</div>
+      <h1>LLM adoption is<br><em>exploding.</em></h1>
+      <p>The data is unambiguous. Large language models are being adopted faster than any technology in history. Here are the numbers.</p>
+      <div class="hero-line"></div>
+    </section>
+
+    <!-- Big headline stats -->
+    <section class="stats-banner fade-in">
+      <div class="stat-item">
+        <span class="stat-number" data-count="910">0</span><span class="stat-suffix">M</span>
+        <span class="stat-label">ChatGPT weekly active users</span>
+        <span class="stat-source">OpenAI / Sacra, Feb 2026</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="88">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">of companies using AI in at least one business function</span>
+        <span class="stat-source">McKinsey, Mar 2026</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-prefix">$</span><span class="stat-number" data-count="25">0</span><span class="stat-suffix">B</span>
+        <span class="stat-label">OpenAI annualized revenue</span>
+        <span class="stat-source">Sacra, Feb 2026</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-prefix">$</span><span class="stat-number" data-count="852">0</span><span class="stat-suffix">B</span>
+        <span class="stat-label">OpenAI valuation</span>
+        <span class="stat-source">TechCrunch, Mar 2026</span>
+      </div>
+    </section>
+
+    <!-- ChatGPT Growth -->
+    <section class="chart-section fade-in">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>User Growth</h2>
+      </div>
+      <h3 class="chart-title">ChatGPT: Zero to 910 million in under 3.5 years</h3>
+      <p class="chart-subtitle">Weekly active users, in millions — targeting 1 billion in 2026</p>
+      <div class="chart-container">
+        <canvas id="growthChart"></canvas>
+      </div>
+      <p class="chart-source">Sources: OpenAI announcements, CNBC, Sacra, Sam Altman public statements</p>
+    </section>
+
+    <!-- Speed comparison -->
+    <section class="chart-section fade-in">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Speed of Adoption</h2>
+      </div>
+      <h3 class="chart-title">Fastest to 100 million users</h3>
+      <p class="chart-subtitle">ChatGPT reached the milestone in 2 months. Facebook took 54.</p>
+      <div class="chart-container">
+        <canvas id="raceChart"></canvas>
+      </div>
+      <p class="chart-source">Sources: OpenAI, UBS, Statista</p>
+    </section>
+
+    <!-- Enterprise adoption -->
+    <section class="data-section fade-in">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Enterprise Adoption</h2>
+      </div>
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="data-number">9<span>M+</span></div>
+          <p>paying business users of ChatGPT, up from 5M in Aug 2025</p>
+          <cite>Sacra, Feb 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">88<span>%</span></div>
+          <p>of companies using AI in at least one business function</p>
+          <cite>McKinsey, Mar 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">$122<span>B</span></div>
+          <p>raised by OpenAI in a single funding round — the largest ever</p>
+          <cite>TechCrunch, Mar 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">1,100</div>
+          <p>jobs Cloudflare said AI made obsolete — while posting record revenue</p>
+          <cite>TechCrunch, May 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">$30<span>B</span></div>
+          <p>Anthropic annualized revenue, up ~1,400% year-over-year</p>
+          <cite>Sacra, Mar 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">51<span>%</span></div>
+          <p>of all VC funding went to AI startups in 2025</p>
+          <cite>Economic Times, Jan-Oct 2025</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Revenue chart -->
+    <section class="chart-section fade-in">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>Revenue</h2>
+      </div>
+      <h3 class="chart-title">The money is following</h3>
+      <p class="chart-subtitle">Annualized revenue / run-rate, billions USD — 2026 numbers</p>
+      <div class="chart-container">
+        <canvas id="revenueChart"></canvas>
+      </div>
+      <p class="chart-source">Sources: Sacra, TechCrunch, Anthropic Series G (Feb 2026), Bloomberg (Cursor), Microsoft FY25 earnings</p>
+    </section>
+
+    <!-- Industry breakdown -->
+    <section class="data-section fade-in">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>Adoption by Industry</h2>
+      </div>
+      <div class="data-grid industry-grid">
+        <div class="data-card industry-card">
+          <div class="industry-label">Healthcare</div>
+          <div class="data-number">66<span>%</span></div>
+          <p>of US physicians use healthcare AI</p>
+          <cite>American Medical Association, 2025</cite>
+        </div>
+        <div class="data-card industry-card">
+          <div class="industry-label">Legal</div>
+          <div class="data-number">~50<span>%</span></div>
+          <p>of law firms piloting or deploying generative AI</p>
+          <cite>Thomson Reuters Future of Professionals, 2024</cite>
+        </div>
+        <div class="data-card industry-card">
+          <div class="industry-label">Finance</div>
+          <div class="data-number">19.6<span>%</span></div>
+          <p>of the AI market — the largest end-use segment</p>
+          <cite>Precedence Research, 2025</cite>
+        </div>
+        <div class="data-card industry-card">
+          <div class="industry-label">Tech</div>
+          <div class="data-number">90<span>%</span></div>
+          <p>of tech workers using AI tools</p>
+          <cite>Google / CNN, 2025</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Coding Tools -->
+    <section class="data-section fade-in">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>AI Coding Tools — 2026</h2>
+      </div>
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="data-number">$2<span>B</span></div>
+          <p>Cursor annualized revenue — doubled in 3 months. Fastest SaaS to $500M ARR ever.</p>
+          <cite>Bloomberg, Mar 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">$2.5<span>B</span></div>
+          <p>Claude Code annualized revenue — more than doubled since start of 2026</p>
+          <cite>Sacra, Feb 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">150<span>M</span></div>
+          <p>lines of code generated daily by Cursor alone</p>
+          <cite>Sacra, 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">~4<span>%</span></div>
+          <p>of all public GitHub commits now generated via Claude</p>
+          <cite>Sacra, 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">70<span>%</span></div>
+          <p>of Fortune 1000 companies using Cursor for engineering</p>
+          <cite>Sacra, 2026</cite>
+        </div>
+        <div class="data-card">
+          <div class="data-number">$50<span>B+</span></div>
+          <p>Cursor's reported valuation in April 2026 funding talks</p>
+          <cite>Sacra, Apr 2026</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer tool popularity chart -->
+    <section class="chart-section fade-in">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2>Developer Preferences</h2>
+      </div>
+      <h3 class="chart-title">What developers are using</h3>
+      <p class="chart-subtitle">Most popular AI tools among developers, by usage share</p>
+      <div class="chart-container">
+        <canvas id="devToolsChart"></canvas>
+      </div>
+      <p class="chart-source">Source: Stack Overflow Developer Survey, 2024</p>
+    </section>
+
+    <!-- Quotes -->
+    <section class="quotes-section fade-in">
+      <div class="section-header">
+        <span class="section-number">08</span>
+        <h2>In Their Words</h2>
+      </div>
+
+      <blockquote class="quote-card">
+        <div class="quote-mark">&ldquo;</div>
+        <p>We went from zero to 400 million weekly active users in just over two years. That's something that's never happened before in the history of consumer technology.</p>
+        <footer>
+          <strong>Brad Lightcap</strong><span class="quote-role">, COO of OpenAI</span>
+          <cite>CNBC, Feb 2025</cite>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote-card">
+        <div class="quote-mark">&ldquo;</div>
+        <p>AI is no longer a question of 'if' but 'how fast.' 78% of organizations report using AI in at least one business function, with adoption accelerating across every sector.</p>
+        <footer>
+          <strong>McKinsey & Company</strong>
+          <cite>Global Survey on AI, 2024</cite>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote-card">
+        <div class="quote-mark">&ldquo;</div>
+        <p>The workforce impact will be massive — 92 million roles displaced, but 170 million new roles created. The net is profoundly positive.</p>
+        <footer>
+          <strong>World Economic Forum</strong>
+          <cite>Future of Jobs Report, 2025</cite>
+        </footer>
+      </blockquote>
+    </section>
+
+    <!-- Where this is going -->
+    <section class="projection-section fade-in">
+      <div class="section-header">
+        <span class="section-number">09</span>
+        <h2>Projections</h2>
+      </div>
+      <h3 class="chart-title">Where this is going</h3>
+      <div class="stats-banner projection-banner">
+        <div class="stat-item">
+          <span class="stat-prefix">$</span><span class="stat-number">4.2</span><span class="stat-suffix">T</span>
+          <span class="stat-label">projected global AI market by 2035</span>
+          <span class="stat-source">Precedence Research</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-prefix">$</span><span class="stat-number">15.7</span><span class="stat-suffix">T</span>
+          <span class="stat-label">AI's projected contribution to global GDP by 2030</span>
+          <span class="stat-source">PwC</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-prefix">+</span><span class="stat-number">78</span><span class="stat-suffix">M</span>
+          <span class="stat-label">net new jobs created by AI by 2030</span>
+          <span class="stat-source">World Economic Forum, 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section class="sources-section fade-in">
+      <div class="section-header">
+        <span class="section-number">10</span>
+        <h2>Sources & Citations</h2>
+      </div>
+      <ol class="sources-list">
+        <li>Sacra — OpenAI and Anthropic revenue, user, and valuation analysis, February-March 2026</li>
+        <li>TechCrunch — OpenAI $122B funding round at $852B valuation, March 31, 2026</li>
+        <li>TechCrunch — Cloudflare AI workforce impact, May 7-8, 2026</li>
+        <li>Bloomberg — Cursor $2B ARR milestone, March 2, 2026</li>
+        <li>Anthropic — Series G announcement, model releases, and partnerships, February-May 2026</li>
+        <li>McKinsey & Company — "The State of AI" Global Survey, updated March 2026 (88% adoption)</li>
+        <li>OpenAI — official announcements and press releases on user milestones (2022-2026)</li>
+        <li>Brad Lightcap (OpenAI COO) — CNBC interview, February 2025</li>
+        <li>Sam Altman — public statements on daily prompts (2.5B+), July 2025</li>
+        <li>Stack Overflow — Developer Survey 2024, AI section</li>
+        <li>GitHub — Octoverse 2024 Report, published October 29, 2024</li>
+        <li>Microsoft — FY2025 Q2 and Q3 Earnings Reports (AI revenue: $13B run-rate)</li>
+        <li>Precedence Research — Artificial Intelligence Market Report, 2025</li>
+        <li>PwC — Global Artificial Intelligence Study (AI contribution to GDP)</li>
+        <li>World Economic Forum — Future of Jobs Report, 2025</li>
+        <li>Grand View Research — Global AI market sizing, $391B in 2026</li>
+        <li>Statista — "Time to reach one million users" comparison chart</li>
+        <li>UBS — ChatGPT 100M user milestone analysis, 2023</li>
+        <li>American Medical Association — Physician AI usage survey, 2025</li>
+        <li>Thomson Reuters — Future of Professionals Report, 2024</li>
+        <li>Economic Times — AI startup VC funding share, Jan-Oct 2025</li>
+        <li>Google / CNN — Tech worker AI tool usage, 2025</li>
+      </ol>
+    </section>
+
+    <section class="cta-section">
+      <a href="/" class="back-link">
+        <span class="back-arrow">&larr;</span> Back to Shelf Engineering
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo"><span class="logo-mark">//</span> SE</span>
+      <span>&copy; 2026 Shelf Engineering</span>
+    </div>
+  </footer>
+
+  <script src="charts.js"></script>
+  <script>
+    // Scroll-triggered fade-in
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // Count-up animation for hero stats
+    function animateCount(el) {
+      const target = parseInt(el.dataset.count);
+      const duration = 1800;
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(target * ease);
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const statsObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('[data-count]').forEach(animateCount);
+          statsObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.stats-banner').forEach(el => statsObs.observe(el));
+  </script>
+</body>
+</html>

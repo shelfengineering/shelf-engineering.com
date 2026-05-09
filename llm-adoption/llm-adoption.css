@@ -1,0 +1,430 @@
+/* ── Hero override for stats page ── */
+.hero h1 em {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* ── Stats Banner ── */
+.stats-banner {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2.5rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.stat-item .stat-number {
+  font-family: var(--font-mono);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.stat-prefix,
+.stat-suffix {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.4;
+  font-weight: 300;
+  max-width: 200px;
+}
+
+.stat-source {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #3a4a5a;
+  margin-top: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.stat-divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+}
+
+/* ── Chart sections ── */
+.chart-section {
+  padding: 4rem 0;
+}
+
+.chart-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.chart-subtitle {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.chart-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2rem;
+  position: relative;
+  height: 420px;
+}
+
+.chart-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+  box-shadow: inset 0 0 60px -30px var(--accent-dim);
+  pointer-events: none;
+}
+
+.chart-source {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #3a4a5a;
+  margin-top: 1rem;
+  letter-spacing: 0.03em;
+}
+
+/* ── Data grid ── */
+.data-section {
+  padding: 4rem 0;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.data-card {
+  background: var(--surface);
+  padding: 2rem;
+  transition: background 0.3s;
+}
+
+.data-card:hover {
+  background: var(--surface-raised);
+}
+
+.data-card .data-number {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.03em;
+}
+
+.data-card .data-number span {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-left: 0.1em;
+}
+
+.data-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+.data-card cite {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #3a4a5a;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Industry cards */
+.industry-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.industry-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+/* ── Quotes ── */
+.quotes-section {
+  padding: 4rem 0;
+}
+
+.quote-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2.5rem 2.5rem 2rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.quote-card:hover {
+  border-color: var(--accent-dim);
+}
+
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.quote-card p {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--text-bright);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.quote-card footer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.quote-card footer strong {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.quote-role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.quote-card footer cite {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #3a4a5a;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+/* ── Projections ── */
+.projection-section {
+  padding: 4rem 0;
+}
+
+.projection-banner {
+  border-color: var(--warm);
+}
+
+.projection-banner::before {
+  background: linear-gradient(90deg, transparent, var(--warm), transparent);
+}
+
+.projection-banner .stat-suffix,
+.projection-banner .stat-prefix {
+  color: var(--warm);
+}
+
+/* ── Sources ── */
+.sources-section {
+  padding: 4rem 0;
+}
+
+.sources-list {
+  padding-left: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 3rem;
+  counter-reset: source;
+  list-style: none;
+}
+
+.sources-list li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-weight: 300;
+  counter-increment: source;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.sources-list li::before {
+  content: counter(source) ".";
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #3a4a5a;
+}
+
+/* ── CTA ── */
+.cta-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.back-arrow {
+  transition: transform 0.3s;
+}
+
+.back-link:hover .back-arrow {
+  transform: translateX(-4px);
+}
+
+/* ── Animations ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Mobile ── */
+@media (max-width: 900px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sources-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-banner {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .stat-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .stat-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .stat-item .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-prefix,
+  .stat-suffix {
+    font-size: 1.5rem;
+  }
+
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 300px;
+    padding: 1.25rem;
+  }
+
+  .chart-title {
+    font-size: 1.35rem;
+  }
+
+  .quote-card p {
+    font-size: 1.1rem;
+  }
+
+  .quote-card footer {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .quote-card footer cite {
+    margin-left: 0;
+  }
+}
