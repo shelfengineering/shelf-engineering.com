@@ -3,7 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shelf Engineering</title>
+  <title>Shelf Engineering — Designing for AI discovery</title>
+  <meta name="description" content="Research, education, and builds for the AI-mediated world. Understanding how AI systems discover, evaluate, and choose — so you can prepare.">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/logo/favicon-180.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shelf Engineering — Designing for AI discovery">
+  <meta property="og:description" content="Research, education, and builds for the AI-mediated world. Understanding how AI systems discover, evaluate, and choose.">
+  <meta property="og:url" content="https://shelfengineering.com/">
+  <meta property="og:site_name" content="Shelf Engineering">
+  <meta property="og:image" content="https://shelfengineering.com/assets/logo/og-header.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shelf Engineering — Designing for AI discovery">
+  <meta name="twitter:description" content="Research, education, and builds for the AI-mediated world. Understanding how AI systems discover, evaluate, and choose.">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shelf Engineering",
+    "url": "https://shelfengineering.com",
+    "description": "Research and builds studio focused on how AI is reshaping discovery, selection, and attention. We study how large language models find, evaluate, and surface information.",
+    "founder": {
+      "@type": "Person",
+      "name": "Nicolas"
+    },
+    "sameAs": []
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,22 +51,23 @@
   <header>
     <nav>
       <a href="/" class="logo">
-        <span class="logo-mark">//</span> Shelf Engineering
+        <span class="logo-mark">//</span><span class="logo-warm">/</span> Shelf Engineering
       </a>
       <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="mailto:nicolas@shelfengineering.com">Contact</a>
+        <a href="/principles/">Principles</a>
+        <a href="/how-llms-work/">How LLMs work</a>
+        <a href="/about/">About</a>
+        <a href="mailto:hello@shelfengineering.com">Contact</a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-label">Engineering Studio</div>
-      <h1>Ideas off<br>the shelf.</h1>
-      <p>Research, data, and builds — shipped from the workbench.</p>
-      <div class="hero-line"></div>
+      <div class="hero-label hero-stagger">Engineering Studio</div>
+      <h1 class="hero-stagger">Ideas off<br>the shelf.</h1>
+      <p class="hero-stagger">AI is reshaping how everything gets discovered, chosen, and trusted. We're here to map the new terrain — with research, builds, and radical honesty.</p>
+      <div class="hero-line hero-stagger"></div>
     </section>
 
     <section id="projects" class="projects">
@@ -39,10 +76,32 @@
         <h2>Projects</h2>
       </div>
       <div class="project-grid">
+        <a href="/principles/" class="project-card project-card--featured fade-in">
+          <div class="card-top">
+            <span class="card-status">Live</span>
+            <span class="card-tag tag-cyan">Principles</span>
+          </div>
+          <h3>What is shelf engineering?</h3>
+          <p>The AI shelf metaphor. Why discovery is being rewritten. What we believe — and what we won't pretend to know.</p>
+          <div class="card-footer">
+            <span class="card-arrow">&rarr;</span>
+          </div>
+        </a>
+        <a href="/how-llms-work/" class="project-card fade-in">
+          <div class="card-top">
+            <span class="card-status">Live</span>
+            <span class="card-tag tag-amber">Education</span>
+          </div>
+          <h3>How LLMs actually work</h3>
+          <p>Training data vs. inference. What's known, what's reverse-engineered, what's still unknown. No snake oil.</p>
+          <div class="card-footer">
+            <span class="card-arrow">&rarr;</span>
+          </div>
+        </a>
         <a href="/llm-adoption/" class="project-card fade-in">
           <div class="card-top">
             <span class="card-status">Live</span>
-            <span class="card-tag">Research</span>
+            <span class="card-tag tag-cyan">Research</span>
           </div>
           <h3>LLM Adoption Is Exploding</h3>
           <p>Data, charts, and citations showing how fast large language models are being adopted across every industry.</p>
@@ -53,7 +112,7 @@
         <a href="https://behaviourbook.shelfengineering.com" class="project-card fade-in">
           <div class="card-top">
             <span class="card-status">Live</span>
-            <span class="card-tag">Education</span>
+            <span class="card-tag tag-amber">Build</span>
           </div>
           <h3>Behaviour Book</h3>
           <p>Free, private behaviour tracking for Australian primary school teachers. Log behaviour in 10 seconds, spot patterns, get evidence-based next steps.</p>
@@ -70,14 +129,18 @@
         <h2>About</h2>
       </div>
       <div class="about-content">
-        <p>Shelf Engineering is where ideas get built. Each project lives on its own page with its own data, code, and story. Explore above to see what's shipping.</p>
+        <div class="about-accent"></div>
+        <div class="about-text">
+          <p>The system that decides what gets discovered is being rewritten. Not by committees or regulations — by language models processing billions of queries, making billions of choices about what to surface and what to ignore.</p>
+          <p>Shelf Engineering exists to understand that shift and prepare for it. We publish the research, build the tools, and explain the mechanics — honestly, with sources, and without the noise that dominates this space.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <span class="footer-logo"><span class="logo-mark">//</span> SE</span>
+      <span class="footer-logo"><span class="logo-mark">//</span><span class="logo-warm">/</span> SE</span>
       <span>&copy; 2026 Shelf Engineering</span>
     </div>
   </footer>

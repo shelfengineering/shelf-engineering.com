@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How LLMs actually work — Shelf Engineering</title>
+  <meta name="description" content="An honest look at how large language models discover and choose information. What's known, what's reverse-engineered, and what's still unknown.">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/logo/favicon-180.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How LLMs actually work">
+  <meta property="og:description" content="Training data vs. inference. What's known, what's reverse-engineered, what's still unknown. An honest breakdown with no snake oil.">
+  <meta property="og:url" content="https://shelfengineering.com/how-llms-work/">
+  <meta property="og:site_name" content="Shelf Engineering">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How LLMs actually work">
+  <meta name="twitter:description" content="Training data vs. inference. What's known, what's reverse-engineered, what's still unknown. An honest breakdown with no snake oil.">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How LLMs actually work",
+    "description": "An honest look at how large language models discover and choose information. What's known, what's reverse-engineered, and what's still unknown.",
+    "author": {
+      "@type": "Person",
+      "name": "Nicolas"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com"
+    },
+    "mainEntityOfPage": "https://shelfengineering.com/how-llms-work/",
+    "datePublished": "2026-05-10"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../principles/principles.css">
+  <link rel="stylesheet" href="how-llms-work.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <span class="logo-mark">//</span><span class="logo-warm">/</span> Shelf Engineering
+      </a>
+      <div class="nav-links">
+        <a href="/principles/">Principles</a>
+        <a href="/about/">About</a>
+        <a href="mailto:hello@shelfengineering.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label">Education</div>
+      <h1>How LLMs<br><em>actually</em> work.</h1>
+      <p>The system is vast, partially visible, and changing fast. Here's an honest map of what we can see — the known architecture, the reverse-engineered edges, and the territory that's still dark.</p>
+      <div class="hero-line"></div>
+    </section>
+
+    <!-- The Honest Starting Point -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>The Honest Starting Point</h2>
+      </div>
+      <div class="prose">
+        <p>Before we explain anything, we need to be upfront about the state of knowledge in this space.</p>
+        <p>The large AI companies — OpenAI, Anthropic, Google, Meta — train their models on massive datasets. These datasets, and the exact processes that turn them into model behaviour, are proprietary. They don't publish what's in the training data. They don't publish the full details of how models are fine-tuned. This is their competitive advantage, and they guard it.</p>
+        <p>That means anyone claiming to know exactly how to "get into" an LLM's training data is either oversimplifying or misleading you.</p>
+      </div>
+
+      <div class="honesty-card fade-in">
+        <div class="honesty-header">
+          <span class="honesty-icon"></span>
+          <h4>What we're honest about</h4>
+        </div>
+        <div class="honesty-grid">
+          <div class="honesty-item">
+            <span class="honesty-label known">Known</span>
+            <p>How LLMs process text at inference time — the mechanics of how they read, reason, and respond</p>
+          </div>
+          <div class="honesty-item">
+            <span class="honesty-label observed">Observed</span>
+            <p>What types of content LLMs tend to surface, cite, and recommend — based on testing and reverse engineering</p>
+          </div>
+          <div class="honesty-item">
+            <span class="honesty-label unknown">Unknown</span>
+            <p>The exact contents of training datasets and the precise weighting of different signals in model behaviour</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two Layers -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Two Layers of AI Discovery</h2>
+      </div>
+      <div class="prose">
+        <p>When people talk about "getting discovered by AI," they're usually conflating two very different things. Understanding the distinction matters.</p>
+      </div>
+
+      <div class="layer-card fade-in">
+        <div class="layer-header">
+          <span class="layer-number">Layer 1</span>
+          <h4>Training data</h4>
+          <span class="layer-tag difficult">Extremely difficult to influence</span>
+        </div>
+        <div class="layer-body">
+          <p>This is what the model "knows" before you ever talk to it. The vast corpus of text scraped from the web, books, code repositories, and other sources that was used to train the model.</p>
+          <p>You can't control this. The AI companies decide what goes in, how it's weighted, and when it's updated. If your brand or content made it into the training data, the model may know about you. If it didn't, it doesn't. And you have very limited ability to change that.</p>
+          <p>This is the part most "AI SEO" vendors oversell. They imply you can engineer your way into training data. The reality is much messier.</p>
+        </div>
+      </div>
+
+      <div class="layer-card fade-in">
+        <div class="layer-header">
+          <span class="layer-number">Layer 2</span>
+          <h4>Inference — how the model reads you live</h4>
+          <span class="layer-tag valuable">Where the real value is</span>
+        </div>
+        <div class="layer-body">
+          <p>This is where it gets interesting. When an LLM browses the web, reads your website, processes a document, or is given context about you — it's doing inference. It's reading and interpreting your content in real time.</p>
+          <p>This is the layer you can actually influence. Not by gaming anything, but by understanding how LLMs read and making your content genuinely useful to them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How LLMs Read -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>How LLMs Read</h2>
+      </div>
+      <div class="prose">
+        <p>An LLM reading your website is similar to Google's crawler in some ways — and completely different in others. Understanding both the similarities and the differences is where the value is.</p>
+      </div>
+
+      <div class="comparison-grid fade-in">
+        <div class="comparison-col">
+          <h4>Like Google</h4>
+          <ul>
+            <li>They crawl and read web pages</li>
+            <li>They value clear structure and headings</li>
+            <li>They care about the quality and relevance of content</li>
+            <li>They follow links and understand site structure</li>
+            <li>They can identify authoritative vs. spammy content</li>
+          </ul>
+        </div>
+        <div class="comparison-divider"></div>
+        <div class="comparison-col">
+          <h4>Unlike Google</h4>
+          <ul>
+            <li>They actually understand the meaning of text, not just keywords</li>
+            <li>They can synthesize information across multiple sources</li>
+            <li>They don't rank by backlinks — they evaluate by coherence and usefulness</li>
+            <li>They read the full text, not just the first paragraph</li>
+            <li>They respond to how clearly you explain things, not how well you keyword-stuff</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>The biggest shift: Google matches keywords. LLMs understand meaning. This changes everything about how you should structure content.</p>
+      </div>
+    </section>
+
+    <!-- What LLMs Value -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>What LLMs Value</h2>
+      </div>
+      <div class="prose">
+        <p>Based on publicly available research, our testing, and the broader reverse-engineering community, these are the signals that consistently matter when LLMs process content. We mark our confidence level for each.</p>
+      </div>
+
+      <div class="signal-list">
+        <div class="signal-item fade-in">
+          <div class="signal-header">
+            <h4>Clear, structured content</h4>
+            <span class="confidence high">High confidence</span>
+          </div>
+          <p>Semantic HTML, logical heading hierarchies, clear section boundaries. LLMs parse structure to understand what content is about and how ideas relate to each other. This isn't about gaming — it's about being readable.</p>
+        </div>
+
+        <div class="signal-item fade-in">
+          <div class="signal-header">
+            <h4>Specificity over vagueness</h4>
+            <span class="confidence high">High confidence</span>
+          </div>
+          <p>Concrete facts, specific numbers, named entities. "Founded in 2019 in Melbourne, employs 45 people" is vastly more useful to an LLM than "a growing company with a dedicated team." Specific information can be extracted, verified, and cited.</p>
+        </div>
+
+        <div class="signal-item fade-in">
+          <div class="signal-header">
+            <h4>Structured data and metadata</h4>
+            <span class="confidence high">High confidence</span>
+          </div>
+          <p>Schema.org markup, Open Graph tags, well-formed meta descriptions. These are machine-readable signals that help LLMs (and their tool-use pipelines) quickly understand what a page is about without ambiguity.</p>
+        </div>
+
+        <div class="signal-item fade-in">
+          <div class="signal-header">
+            <h4>LLM-specific files (llms.txt)</h4>
+            <span class="confidence medium">Medium confidence</span>
+          </div>
+          <p>A growing convention where websites provide a plain-text file specifically for LLM consumption. Like robots.txt told search crawlers what to do, llms.txt tells language models what the site is about. Adoption is early but growing.</p>
+        </div>
+
+        <div class="signal-item fade-in">
+          <div class="signal-header">
+            <h4>Consistent identity across sources</h4>
+            <span class="confidence medium">Medium confidence</span>
+          </div>
+          <p>When your name, brand, and key facts appear consistently across your website, social profiles, directories, and publications, LLMs are more likely to surface accurate information about you. Inconsistency creates confusion for models just like it does for people.</p>
+        </div>
+
+        <div class="signal-item fade-in">
+          <div class="signal-header">
+            <h4>Freshness and update signals</h4>
+            <span class="confidence medium">Medium confidence</span>
+          </div>
+          <p>Content with clear dates, regular updates, and recent timestamps tends to be preferred by LLMs with web access. Stale content without dates gets less weight. This is more relevant for models with retrieval-augmented generation (RAG) than for training-data-only responses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Don't Know -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>What We Don't Know</h2>
+      </div>
+      <div class="prose">
+        <p>Intellectual honesty means being explicit about the gaps. Here's what nobody in this space can tell you with certainty — and you should be skeptical of anyone who claims otherwise.</p>
+      </div>
+
+      <div class="unknown-list">
+        <div class="unknown-item fade-in">
+          <span class="unknown-icon">?</span>
+          <div>
+            <h4>Exact training data composition</h4>
+            <p>No one outside the AI companies knows exactly what's in the training data, how it's weighted, or how often it's refreshed.</p>
+          </div>
+        </div>
+        <div class="unknown-item fade-in">
+          <span class="unknown-icon">?</span>
+          <div>
+            <h4>How citation decisions are made</h4>
+            <p>When an LLM cites a source in its response, the exact mechanism for choosing that source over alternatives isn't fully understood.</p>
+          </div>
+        </div>
+        <div class="unknown-item fade-in">
+          <span class="unknown-icon">?</span>
+          <div>
+            <h4>Model-specific differences</h4>
+            <p>ChatGPT, Claude, Gemini, and others all behave differently. What works for one may not work for another. Anyone selling a "universal AI strategy" is oversimplifying.</p>
+          </div>
+        </div>
+        <div class="unknown-item fade-in">
+          <span class="unknown-icon">?</span>
+          <div>
+            <h4>How fast things are changing</h4>
+            <p>These models are updated frequently. Behaviours observed today may change tomorrow. Any strategy needs to be adaptive, not fixed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The SEO Parallel -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>The SEO Parallel</h2>
+      </div>
+      <div class="prose">
+        <p>Google never published its full ranking algorithm. But an entire discipline — SEO — emerged from observation, testing, and reverse engineering. The best practitioners understood the principles even when the specifics shifted with every algorithm update. They mapped an opaque system and built on what they found.</p>
+        <p>Shelf engineering is at the same frontier. We don't have the algorithm. But we understand the principles. And the principles are rooted in something durable: make your information clear, structured, specific, and genuinely useful.</p>
+        <p>The tactics will change. The fundamentals won't. Good content that's well-structured for machines will always outperform vague content that's only designed for human eyes — because increasingly, the machines are the first readers. The grid is being built now. The question is whether you can see it.</p>
+      </div>
+    </section>
+
+    <!-- What You Can Do -->
+    <section class="content-section fade-in">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2>What You Can Do Now</h2>
+      </div>
+      <div class="prose">
+        <p>You don't need to wait for the field to mature. The fundamentals are already clear.</p>
+      </div>
+
+      <div class="action-grid">
+        <div class="action-item fade-in">
+          <span class="action-number">01</span>
+          <h4>Audit your content for clarity</h4>
+          <p>Can an LLM read your website and immediately understand what you do, who you serve, and what makes you different? Test it — paste your homepage into ChatGPT and ask it to summarize your business.</p>
+        </div>
+        <div class="action-item fade-in">
+          <span class="action-number">02</span>
+          <h4>Add structured data</h4>
+          <p>Schema.org markup, clean meta descriptions, consistent naming. These aren't just good for Google — they're increasingly important for AI systems that use web browsing tools.</p>
+        </div>
+        <div class="action-item fade-in">
+          <span class="action-number">03</span>
+          <h4>Be specific</h4>
+          <p>Replace vague marketing language with concrete facts. Numbers, locations, dates, capabilities. The more specific your content, the more useful it is to both humans and AI.</p>
+        </div>
+        <div class="action-item fade-in">
+          <span class="action-number">04</span>
+          <h4>Consider an llms.txt</h4>
+          <p>A plain-text summary of your site designed for LLM consumption. It's a small effort with potential upside as AI systems increasingly look for these files.</p>
+        </div>
+        <div class="action-item fade-in">
+          <span class="action-number">05</span>
+          <h4>Stay informed, stay skeptical</h4>
+          <p>This field is moving fast. Read broadly, test things yourself, and be wary of anyone selling certainty. The honest practitioners will always tell you what they don't know.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section fade-in">
+      <div class="next-link-group">
+        <span class="next-label">Read more</span>
+        <a href="/principles/" class="next-link">
+          What is shelf engineering? <span class="next-arrow">&rarr;</span>
+        </a>
+        <p class="next-desc">The founding concept — how AI is changing which "shelves" matter for discovery and choice.</p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <a href="/" class="back-link">
+        <span class="back-arrow">&larr;</span> Back to Shelf Engineering
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo"><span class="logo-mark">//</span><span class="logo-warm">/</span> SE</span>
+      <span>&copy; 2026 Shelf Engineering</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

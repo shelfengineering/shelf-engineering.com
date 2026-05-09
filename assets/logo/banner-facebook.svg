@@ -1,0 +1,27 @@
+<svg viewBox="0 0 851 315" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gc" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="ga" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <rect width="851" height="315" fill="#080b0e"/>
+  <g transform="translate(330, 30)">
+    <g filter="url(#gc)" opacity="0.45">
+      <line x1="30" y1="150" x2="70" y2="20" stroke="#00f0ff" stroke-width="14" stroke-linecap="round"/>
+      <line x1="75" y1="150" x2="115" y2="20" stroke="#00f0ff" stroke-width="14" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#ga)" opacity="0.45">
+      <line x1="120" y1="150" x2="160" y2="20" stroke="#f59e0b" stroke-width="14" stroke-linecap="round"/>
+    </g>
+    <line x1="30" y1="150" x2="70" y2="20" stroke="#00f0ff" stroke-width="9" stroke-linecap="round"/>
+    <line x1="75" y1="150" x2="115" y2="20" stroke="#00f0ff" stroke-width="9" stroke-linecap="round"/>
+    <line x1="120" y1="150" x2="160" y2="20" stroke="#f59e0b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="30" y1="150" x2="70" y2="20" stroke="#b0faff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="75" y1="150" x2="115" y2="20" stroke="#b0faff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="120" y1="150" x2="160" y2="20" stroke="#fcd68d" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700');
+    .wm { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.1em; }
+  </style>
+  <text x="426" y="268" text-anchor="middle" class="wm" fill="#5a6a7a">Shelf Engineering</text>
+</svg>

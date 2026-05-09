@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gc" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ga" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="400" height="400" fill="#080b0e"/>
+  <g filter="url(#gc)" opacity="0.5">
+    <line x1="122" y1="268" x2="162" y2="132" stroke="#00f0ff" stroke-width="18" stroke-linecap="round"/>
+    <line x1="170" y1="268" x2="210" y2="132" stroke="#00f0ff" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#ga)" opacity="0.5">
+    <line x1="218" y1="268" x2="258" y2="132" stroke="#f59e0b" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <line x1="122" y1="268" x2="162" y2="132" stroke="#00f0ff" stroke-width="12" stroke-linecap="round"/>
+  <line x1="170" y1="268" x2="210" y2="132" stroke="#00f0ff" stroke-width="12" stroke-linecap="round"/>
+  <line x1="218" y1="268" x2="258" y2="132" stroke="#f59e0b" stroke-width="12" stroke-linecap="round"/>
+  <line x1="122" y1="268" x2="162" y2="132" stroke="#b0faff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="170" y1="268" x2="210" y2="132" stroke="#b0faff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="218" y1="268" x2="258" y2="132" stroke="#fcd68d" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shelfengineering.com/sitemap.xml
+
+# LLM-optimized site summary
+# See https://shelfengineering.com/llms.txt

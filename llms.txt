@@ -1,0 +1,34 @@
+# Shelf Engineering
+
+> Shelf Engineering is a research and builds studio focused on how AI is reshaping discovery, selection, and attention. We study how large language models find, evaluate, and surface information — and what that means for businesses, brands, and individuals.
+
+## What we do
+
+Shelf Engineering publishes original research, educational content, and tools. We explain how AI systems work, what's changing about how businesses get discovered, and what you can do about it — honestly, with citations, and without hype.
+
+## Core concept
+
+In a supermarket, shelf placement determines what gets seen and bought — decades of merchandising science optimized for the human eye. When AI becomes the one discovering and recommending, the "shelf" shifts from physical to informational. Shelf engineering is the discipline of designing for AI attention and selection, the way merchandising was designed for human attention.
+
+## Pages
+
+- [Home](https://shelfengineering.com): Studio landing page with project directory
+- [Principles](https://shelfengineering.com/principles/): What shelf engineering means — the AI shelf metaphor, historical parallels, and our values
+- [How LLMs work](https://shelfengineering.com/how-llms-work/): Honest breakdown of LLM mechanics — training data vs. inference, what's known vs. unknown
+- [LLM Adoption data](https://shelfengineering.com/llm-adoption/): Research page with data, charts, and citations on the speed of LLM adoption
+- [About](https://shelfengineering.com/about/): Nicolas — founder, 8 years in AI, digital nomad, built Shelf Engineering to help people understand the shift
+
+## Projects
+
+- Behaviour Book (https://behaviourbook.shelfengineering.com): Free, private behaviour tracking for Australian primary school teachers
+
+## Values
+
+- Education first: we explain new concepts clearly, we don't sell fear
+- Honest about the tech: we say what's known, what's reverse-engineered, and what's still unknown
+- Show the work: no stat without a source, no claim without evidence
+- Built for forward-thinkers: for people who see the direction and want to prepare thoughtfully
+
+## Contact
+
+Email: hello@shelfengineering.com

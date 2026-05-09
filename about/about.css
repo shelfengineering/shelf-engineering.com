@@ -1,0 +1,123 @@
+/* ── Bio metadata ── */
+.bio-block {
+  margin-bottom: 2rem;
+}
+
+.bio-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.bio-meta-item {
+  background: var(--surface);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bio-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.bio-value {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-bright);
+  font-weight: 400;
+}
+
+.bio-link {
+  color: var(--cyan-mid);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.bio-link:hover {
+  color: var(--cyan);
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.65rem;
+  top: 0.45rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan-muted);
+  flex-shrink: 0;
+}
+
+.timeline-item:last-child .timeline-marker {
+  background: var(--amber-muted);
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--cyan-muted);
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item:last-child .timeline-date {
+  color: var(--amber-muted);
+}
+
+.timeline-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .bio-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
