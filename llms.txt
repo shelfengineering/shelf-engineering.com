@@ -21,6 +21,7 @@ In a supermarket, shelf placement determines what gets seen and bought — decad
 ## Projects
 
 - Behaviour Book (https://behaviourbook.shelfengineering.com): Free, private behaviour tracking for Australian primary school teachers
+- VoicedRPG (https://voicedrpg.shelfengineering.com): A voice-driven RPG built across eight iterations — playable now, with v1–v7 kept live as an evolution showcase
 
 ## Values
 
