@@ -1,0 +1,117 @@
+/* Projects portfolio — implemented from Claude Design "Projects.dc.html"
+   Deliberately its own visual world: light editorial paper, Newsreader + Public Sans,
+   terracotta accent. Does not use the site-wide dark tokens. */
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#F3ECDF;
+  color:#241E16;
+  font-family:'Public Sans',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 40px}
+
+/* top bar — minimal way back to the main site, in this page's own language */
+.topbar{padding:28px 0 0}
+.topbar a{
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  color:#8A7E6C;text-decoration:none;transition:color .3s ease;
+}
+.topbar a:hover{color:#BB4B2C}
+.topbar .slashes{color:#BB4B2C}
+
+/* header */
+@keyframes pjHeroRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+header.pj{padding:120px 0 84px;border-bottom:1px solid rgba(36,30,22,.14)}
+.kicker{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#BB4B2C}
+header.pj .kicker-row{opacity:0;animation:pjHeroRise .7s cubic-bezier(.2,.7,.2,1) .05s forwards}
+header.pj h1{
+  opacity:0;animation:pjHeroRise .8s cubic-bezier(.2,.7,.2,1) .14s forwards;
+  font-family:'Newsreader',Georgia,serif;font-weight:500;
+  font-size:clamp(44px,7vw,84px);line-height:1.02;letter-spacing:-.02em;
+  margin:22px 0 0;max-width:14ch;
+}
+header.pj .lede{
+  opacity:0;animation:pjHeroRise .8s cubic-bezier(.2,.7,.2,1) .24s forwards;
+  font-family:'Newsreader',Georgia,serif;font-size:21px;line-height:1.6;
+  color:#5C5345;max-width:52ch;margin:30px 0 0;text-wrap:pretty;
+}
+
+/* group section */
+section.group{padding:96px 0 8px}
+.group-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+  padding-bottom:34px;border-bottom:1px solid rgba(36,30,22,.14);margin-bottom:8px;
+}
+.group-head .kicker{letter-spacing:.22em}
+.group-head h2{
+  font-family:'Newsreader',Georgia,serif;font-weight:500;
+  font-size:clamp(30px,4vw,46px);letter-spacing:-.015em;margin:14px 0 0;
+}
+.group-head .blurb{
+  font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:19px;
+  color:#8A7E6C;white-space:nowrap;
+}
+
+/* project row */
+article.project{
+  display:flex;gap:clamp(32px,5vw,72px);align-items:center;
+  padding:54px 0;border-bottom:1px solid rgba(36,30,22,.10);
+}
+.img-wrap{
+  flex:0 0 50%;max-width:50%;aspect-ratio:4/3;border-radius:3px;overflow:hidden;
+  background:#E7DCC9;
+  box-shadow:0 1px 2px rgba(36,30,22,.10),0 18px 40px -24px rgba(36,30,22,.45);
+  transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s cubic-bezier(.2,.7,.2,1);
+}
+.img-wrap img{display:block;width:100%;height:100%;object-fit:cover}
+article.project:hover .img-wrap{
+  transform:translateY(-6px) scale(1.012);
+  box-shadow:0 1px 2px rgba(36,30,22,.10),0 32px 60px -28px rgba(36,30,22,.55);
+}
+.proj-text{flex:1 1 0;min-width:0}
+.proj-meta{display:flex;align-items:baseline;gap:16px;margin-bottom:18px}
+.proj-no{font-family:'Newsreader',Georgia,serif;font-size:15px;font-weight:500;color:#BB4B2C}
+.proj-tag{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#8A7E6C}
+.proj-year{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#A99C86}
+.proj-text h3{
+  font-family:'Newsreader',Georgia,serif;font-weight:500;
+  font-size:clamp(26px,3vw,34px);line-height:1.1;letter-spacing:-.015em;margin:0;
+}
+.proj-text p{
+  font-family:'Newsreader',Georgia,serif;font-size:18px;line-height:1.62;
+  color:#5C5345;margin:16px 0 0;max-width:46ch;text-wrap:pretty;
+}
+a.proj-cta{
+  display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+  font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  color:#241E16;text-decoration:none;border-bottom:1.5px solid #BB4B2C;padding-bottom:4px;
+  transition:gap .3s ease,color .3s ease;
+}
+a.proj-cta:hover{gap:16px;color:#BB4B2C}
+a.proj-cta .arrow{font-family:'Newsreader',Georgia,serif;font-size:16px}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  header.pj .kicker-row,header.pj h1,header.pj .lede{animation:none;opacity:1}
+}
+
+/* footer */
+footer.pj{padding:90px 0 110px;margin-top:40px;text-align:center}
+footer.pj .sign-off{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:22px;color:#241E16}
+footer.pj .built{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#A99C86;margin-top:18px}
+
+@media (max-width:820px){
+  .wrap{padding:0 24px}
+  header.pj{padding:80px 0 60px}
+  .group-head{flex-direction:column;gap:10px}
+  .group-head .blurb{white-space:normal}
+  article.project{flex-direction:column;align-items:stretch;gap:26px;padding:44px 0}
+  .img-wrap{flex:none;max-width:none}
+}

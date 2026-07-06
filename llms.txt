@@ -1,18 +1,23 @@
 # Shelf Engineering
 
-> Shelf Engineering is a research and builds studio focused on how AI is reshaping discovery, selection, and attention. We study how large language models find, evaluate, and surface information — and what that means for businesses, brands, and individuals.
+> Shelf Engineering is a research and builds studio focused on how AI is reshaping discovery, selection, and attention. We study how AI agents find, evaluate, and surface information — and what that means for businesses, brands, and individuals.
 
 ## What we do
 
-Shelf Engineering publishes original research, educational content, and tools. We explain how AI systems work, what's changing about how businesses get discovered, and what you can do about it — honestly, with citations, and without hype.
+Shelf Engineering publishes original research, educational content, and tools. We explain how agentic AI works, what's changing about how businesses get discovered, and what you can do about it — honestly, with citations, and without hype. For businesses, we audit what AI agents actually say about them, fix their machine-readability, and monitor as the models change.
 
 ## Core concept
 
-In a supermarket, shelf placement determines what gets seen and bought — decades of merchandising science optimized for the human eye. When AI becomes the one discovering and recommending, the "shelf" shifts from physical to informational. Shelf engineering is the discipline of designing for AI attention and selection, the way merchandising was designed for human attention.
+In a supermarket, shelf placement determines what gets seen and bought — decades of merchandising science optimized for the human eye. When AI agents become the ones discovering and recommending, the "shelf" shifts from a page of search results to whatever the agent can read. Shelf engineering is the discipline of designing for AI attention and selection, the way merchandising was designed for human attention.
 
 ## Pages
 
-- [Home](https://shelfengineering.com): Studio landing page with project directory
+- [Home](https://shelfengineering.com): Some people choose AI agents, the rest get them in an update — what you can control, and how to prepare
+- [How it works](https://shelfengineering.com/how-it-works/): What agentic AI actually is, how an agent decides, what it can read, and where it came from
+- [Adoption](https://shelfengineering.com/adoption/): Chosen by some, shipped to everyone — how fast agentic AI is arriving, every stat sourced and dated
+- [For businesses](https://shelfengineering.com/for-businesses/): If an AI agent were asked about your business tomorrow, what would it find? Audit, fix, monitor
+- [Notes](https://shelfengineering.com/notes/): Longer-form writing and research on AI-mediated discovery
+- [Projects](https://shelfengineering.com/projects/): Things built with Claude — games, tools, and experiments
 - [Principles](https://shelfengineering.com/principles/): What shelf engineering means — the AI shelf metaphor, historical parallels, and our values
 - [How LLMs work](https://shelfengineering.com/how-llms-work/): Honest breakdown of LLM mechanics — training data vs. inference, what's known vs. unknown
 - [LLM Adoption data](https://shelfengineering.com/llm-adoption/): Research page with data, charts, and citations on the speed of LLM adoption
@@ -20,8 +25,10 @@ In a supermarket, shelf placement determines what gets seen and bought — decad
 
 ## Projects
 
-- Behaviour Book (https://behaviourbook.shelfengineering.com): Free, private behaviour tracking for Australian primary school teachers
-- VoicedRPG (https://voicedrpg.shelfengineering.com): A voice-driven RPG built across eight iterations — playable now, with v1–v7 kept live as an evolution showcase
+- Behaviour Book (https://behaviourbook.shelfengineering.com): Free, private behaviour tracking for AU & NZ primary school teachers
+- VoicedRPG (https://voicedrpg.shelfengineering.com): A voice-acted narrative RPG engine built across eight iterations — playable now, with v1–v7 kept live as an evolution showcase
+- Homepage Panda (https://homepagepanda.com): A macOS editor for your iPhone home screen — no jailbreak
+- Sideways Dojo (https://sideways-horizontal-tetris.netlify.app): An 80s martial-arts Tetris duel with sideways gravity
 
 ## Values
 

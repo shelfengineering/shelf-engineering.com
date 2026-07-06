@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How agentic AI works — Shelf Engineering</title>
+<meta name="description" content="What agentic AI actually is, how an agent decides, what it can read, and where it came from. No snake oil.">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/logo/favicon-180.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How agentic AI works — Shelf Engineering">
+  <meta property="og:description" content="What agentic AI actually is, how an agent decides, what it can read, and where it came from. No snake oil.">
+  <meta property="og:url" content="https://shelfengineering.com/how-it-works/">
+  <meta property="og:site_name" content="Shelf Engineering">
+  <meta property="og:image" content="https://shelfengineering.com/assets/logo/og-header.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How agentic AI works — Shelf Engineering">
+  <meta name="twitter:description" content="What agentic AI actually is, how an agent decides, what it can read, and where it came from. No snake oil.">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <nav>
+    <a href="/" class="logo"><span class="m">//</span><span class="w">/</span> Shelf Engineering</a>
+    <div class="nav-links">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/adoption/">Adoption</a>
+      <a href="/notes/">Notes</a>
+      <a href="/projects/">Projects</a>
+      <a href="/for-businesses/" class="cta">Are you on the shelf?</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-intro">
+      <div class="kicker hero-stagger">Education · no snake oil</div>
+      <h1 class="hero-stagger">How does agentic AI<br>actually <em>work</em>?</h1>
+      <p class="lead hero-stagger">An agent isn't magic and it isn't a search box. It's a model that reads, reasons over what it can reach, and takes steps toward a goal. Here's the honest mechanics — what's known, and what isn't.</p>
+    </section>
+
+    <!-- 01 · WHAT IS IT -->
+    <section>
+      <div class="section-head reveal">
+        <div class="kicker cyan">First, the definition</div>
+        <h2>What is it — and what's a hallucination</h2>
+      </div>
+      <div class="contrast">
+        <div class="panel cyan reveal">
+          <span class="tag">Definition</span>
+          <h3>From chatbot to agent</h3>
+          <p>A chatbot answers. An <em>agent</em> acts — it breaks a goal into steps, calls tools, reads sources, and works toward an outcome with limited supervision. "Book us somewhere good Friday" becomes a chain of decisions, not one reply.</p>
+        </div>
+        <div class="panel amber reveal d1">
+          <span class="tag">The catch</span>
+          <h3>Why it sometimes invents</h3>
+          <p>A model predicts plausible text. When it lacks a fact, it can produce a confident, wrong one — a hallucination. That's why what an agent can <em>verifiably read about you</em> matters more than what it might guess.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · THE CIRCUIT -->
+    <section>
+      <div class="section-head reveal">
+        <div class="kicker">The decision chain</div>
+        <h2>How an agent gets into a task</h2>
+        <p>Three moves, every time. The part you can influence is the middle one — what the agent finds when it reaches.</p>
+      </div>
+      <div class="circuit-wrap reveal">
+        <svg class="circuit" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: an agent's task flows from Trigger to Reach to Act; under Reach it draws on training data, live search, your structured facts, and connected tools.">
+          <!-- main wire -->
+          <path class="wire" d="M40 90 H860"/>
+          <!-- travelling pulse -->
+          <path class="pulse-path" d="M40 90 H860"/>
+
+          <!-- node 1: TRIGGER -->
+          <rect class="node" x="60" y="58" width="170" height="64" rx="3"/>
+          <text class="node-num" x="78" y="80">1</text>
+          <text class="node-label" x="78" y="100">Trigger</text>
+          <text class="sub-label" x="60" y="150">A user asks — or another system</text>
+          <text class="sub-label" x="60" y="166">hands it a goal.</text>
+
+          <!-- node 2: REACH -->
+          <rect class="node" x="365" y="58" width="170" height="64" rx="3"/>
+          <text class="node-num" x="383" y="80">2</text>
+          <text class="node-label" x="383" y="100">Reach</text>
+          <text class="sub-label" x="365" y="150">It gathers everything it's able</text>
+          <text class="sub-label" x="365" y="166">to read, right now.</text>
+
+          <!-- node 3: ACT -->
+          <rect class="node" x="670" y="58" width="170" height="64" rx="3"/>
+          <text class="node-num" x="688" y="80">3</text>
+          <text class="node-label" x="688" y="100">Act</text>
+          <text class="sub-label" x="670" y="150">It compares, shortlists, answers</text>
+          <text class="sub-label" x="670" y="166">— or books it end to end.</text>
+
+          <!-- reach sources (the part you can influence) -->
+          <path class="wire" d="M450 122 V196"/>
+          <path class="wire" d="M450 196 H160 V216"/>
+          <path class="wire" d="M450 196 H740 V216"/>
+          <path class="wire" d="M355 196 V216"/>
+          <path class="wire" d="M545 196 V216"/>
+
+          <rect class="leaf" x="95"  y="216" width="130" height="34" rx="3"/>
+          <text class="leaf-label" x="112" y="237">Training data</text>
+          <rect class="leaf" x="290" y="216" width="130" height="34" rx="3"/>
+          <text class="leaf-label" x="313" y="237">Live search</text>
+          <rect class="leaf" x="472" y="216" width="146" height="34" rx="3" style="stroke:#f0a020;fill:rgba(240,160,32,.08)"/>
+          <text class="leaf-label" x="487" y="237" style="fill:#f0a020">Your structured facts</text>
+          <rect class="leaf" x="675" y="216" width="130" height="34" rx="3"/>
+          <text class="leaf-label" x="690" y="237">Connected tools</text>
+
+          <text class="sub-label" x="95" y="284" style="fill:#4e5c6a;font-size:10px;letter-spacing:.08em">WHAT IT READS WHEN IT REACHES — THE ONLY BOX YOU CONTROL IS THE AMBER ONE</text>
+        </svg>
+      </div>
+      <p class="circuit-caption">FIG. 01 — THE DECISION CHAIN. THE PULSE RUNS LEFT TO RIGHT; YOUR JOB IS TO BE READABLE AT STEP 2.</p>
+    </section>
+
+    <!-- 03 · READ vs ALLOWED -->
+    <section>
+      <div class="section-head reveal">
+        <div class="kicker cyan">Reach has two halves</div>
+        <h2>What it can read — and what it's allowed to do</h2>
+      </div>
+      <div class="contrast">
+        <div class="panel cyan reveal">
+          <span class="tag">Information &amp; context</span>
+          <h3>What it can read</h3>
+          <ul>
+            <li>What was in its training data (with a cutoff date)</li>
+            <li>Live results it can search for in the moment</li>
+            <li>Structured, machine-readable facts about you</li>
+            <li>Whatever connected tools and accounts expose</li>
+          </ul>
+        </div>
+        <div class="panel amber reveal d1">
+          <span class="tag">Permissions</span>
+          <h3>What it may act on</h3>
+          <ul>
+            <li>Read-only vs. allowed to transact on your behalf</li>
+            <li>Which accounts, calendars, and tools it can touch</li>
+            <li>Where a human still has to approve the step</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · TIMELINE -->
+    <section>
+      <div class="section-head reveal">
+        <div class="kicker">A short history</div>
+        <h2>Where it came from — and where it's going</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="track"></div>
+        <div class="tl-cols">
+          <div class="tl-col past">
+            <div class="when">Past</div>
+            <h4>The chatbot moment</h4>
+            <p>ChatGPT made language models mainstream. Powerful, but passive — it answered, it didn't act. Everything was bounded by its training data.</p>
+          </div>
+          <div class="tl-col present">
+            <div class="when">Present</div>
+            <h4>Tools &amp; reach</h4>
+            <p>Models gained search, tools, and memory. They started reading the live world and taking multi-step actions — the first real agents.</p>
+          </div>
+          <div class="tl-col future">
+            <div class="when">Future</div>
+            <h4>Autonomy</h4>
+            <p>More independence, longer tasks, better judgement. Agents that act unprompted within set bounds — choosing, on your behalf, who makes the shortlist.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Now — can an agent read you?</h2>
+      <p>Understanding the mechanics is step one. The question that pays the bills is whether you're legible to these systems at all.</p>
+      <a href="/for-businesses/" class="btn btn-primary">Check if you're on the shelf →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span><span class="m">//</span><span class="w">/</span> SE</span>
+    <span>© 2026 Shelf Engineering</span>
+  </div>
+</footer>
+
+<script src="/shelf.js"></script>
+</body>
+</html>
