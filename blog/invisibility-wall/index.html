@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The invisibility wall — Shelf Engineering</title>
+<meta name="description" content="We probed 537 Auckland businesses across 6 verticals against Gemini, OpenAI, Claude, and Apple Maps. 321 of them — 60% — were surfaced by no AI engine at all. Original research, June 2026.">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/logo/favicon-180.png">
+
+  <link rel="canonical" href="https://shelfengineering.com/blog/invisibility-wall/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The invisibility wall — Shelf Engineering">
+  <meta property="og:description" content="We probed 537 Auckland businesses across 6 verticals against Gemini, OpenAI, Claude, and Apple Maps. 321 of them — 60% — were surfaced by no AI engine at all. Original research, June 2026.">
+  <meta property="og:url" content="https://shelfengineering.com/blog/invisibility-wall/">
+  <meta property="og:site_name" content="Shelf Engineering">
+  <meta property="og:image" content="https://shelfengineering.com/blog/og/invisibility-wall.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The invisibility wall — Shelf Engineering field research card: dark background, stacked shelf marks with the top shelf lit.">
+  <meta property="article:published_time" content="2026-06-30">
+  <meta property="article:author" content="https://shelfengineering.com/about/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The invisibility wall — Shelf Engineering">
+  <meta name="twitter:description" content="We probed 537 Auckland businesses across 6 verticals against Gemini, OpenAI, Claude, and Apple Maps. 321 of them — 60% — were surfaced by no AI engine at all. Original research, June 2026.">
+  <meta name="twitter:image" content="https://shelfengineering.com/blog/og/invisibility-wall.png">
+  <meta name="twitter:image:alt" content="The invisibility wall — Shelf Engineering field research card: dark background, stacked shelf marks with the top shelf lit.">
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The invisibility wall",
+    "description": "We probed 537 Auckland businesses across 6 verticals against Gemini, OpenAI, Claude, and Apple Maps. 321 of them \u2014 60% \u2014 were surfaced by no AI engine at all. Original research, June 2026.",
+    "url": "https://shelfengineering.com/blog/invisibility-wall/",
+    "image": "https://shelfengineering.com/blog/og/invisibility-wall.png",
+    "datePublished": "2026-06-30",
+    "dateModified": "2026-06-30",
+    "author": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shelfengineering.com/assets/logo/mark-full-256.png"
+      }
+    }
+  }
+  </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <nav>
+    <a href="/" class="logo"><span class="m">//</span><span class="w">/</span> Shelf Engineering</a>
+    <div class="nav-links">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/adoption/">Adoption</a>
+      <a href="/blog/">Blog</a>
+      <a href="/projects/">Projects</a>
+      <a href="/for-businesses/" class="cta">Are you on the shelf?</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-intro post-hero">
+      <div class="kicker hero-stagger">Field research · Auckland · June–July 2026</div>
+      <h1 class="hero-stagger">60% of real businesses<br>don't exist to AI.</h1>
+      <p class="lead hero-stagger">We built exhaustive lists of every Italian, Japanese, sushi and Indian restaurant, every barber, and every board-game shop in Auckland — then asked the AI engines about each vertical, every way a customer would. 321 of 537 businesses never came up. Not once, on any engine.</p>
+    </section>
+
+    <article class="post">
+<div class="scopebox"><b>SCOPE</b> — Auckland, New Zealand · June–July 2026 snapshot. 7 verticals, 679 probed businesses: Italian, Japanese, sushi and Indian restaurants, barbers, plumbers, and board-game shops. Engines queried via their APIs — Gemini with Google Search grounding, OpenAI web_search, Claude with live search, and Apple Maps (MKLocalSearch, the layer Siri uses for local queries). APIs are clean, reproducible instruments and <b>proxies</b> for the consumer products, not the apps themselves. One city, one snapshot — treat this as field data, not a global law.</div>
+
+<p>The premise of this research was simple: if AI agents are becoming a way people discover local businesses, someone should measure who the agents can actually see. So we did it properly — not "ask ChatGPT and screenshot the answer," but building a verified master list of <strong>every business in a vertical</strong> (cross-referenced against the Apple Maps POI layer), then sweeping four engine families with the queries a real customer would use, and checking which of those real businesses ever appeared.</p>
+<p>The headline: pooled across our six exhaustive verticals, <strong>321 of 537 businesses (60%) were invisible to every AI engine we tested</strong> — no mention, no citation, nothing, across every query and every model tier. If anything that's an <em>undercount</em>: our name-matching is deliberately generous, so a business named after its category ("Sushi Takeaway") can be credited as seen when the answer merely used those words. Each query ran once per tier — a zero across four or five queries and every model is meaningful, though it isn't infinite sampling. And a business missing from the Maps layer entirely never made our master list in the first place.</p>
+<table>
+<tr><th scope="col">Vertical</th><th scope="col">Businesses</th><th scope="col">Invisible to every engine</th></tr>
+<tr><td>Japanese restaurants</td><td class="num">122</td><td class="num dim">79</td></tr>
+<tr><td>Sushi</td><td class="num">111</td><td class="num dim">66</td></tr>
+<tr><td>Indian restaurants</td><td class="num">108</td><td class="num dim">74</td></tr>
+<tr><td>Barbers</td><td class="num">104</td><td class="num dim">61</td></tr>
+<tr><td>Italian restaurants</td><td class="num">73</td><td class="num dim">39</td></tr>
+<tr><td>Board-game shops</td><td class="num">19</td><td class="num dim">2</td></tr>
+</table>
+<p>Two readings of that table matter. First, the wall is consistent: every food and service vertical loses half or more of its real businesses. Second, the one exception is instructive — board-game shops are a tiny, well-documented market (19 shops, a passionate community writing about them), and almost all of them surface. <strong>The wall isn't about AI disliking small business. It's about how much of the web talks about you.</strong></p>
+<h2>The long tail exists only on the map</h2>
+<p>Most of the invisible businesses do exist somewhere an agent could theoretically reach: they're in the Apple Maps layer, which is why our master lists could include them. In the restaurant verticals, Apple Maps (the layer Siri draws on) actually surfaced <em>more</em> individual venues than any language-model engine — 25 to 30 per vertical in our runs. But being a pin on a map is not the same as being recommendable: a pin gets you found when someone searches your name, not chosen when someone asks <em>"where should we eat Friday?"</em></p>
+<p>And before you assume the invisible 60% are blocking AI crawlers or have broken websites: they aren't, and mostly they don't. Only 28 of all 679 probed businesses deny AI crawlers in robots.txt — we wrote that up separately in <a href="/blog/nobody-is-blocking-the-agents/">Nobody is blocking the agents</a>. The wall is an <em>authority</em> problem, not an <em>access</em> problem: nobody independent writes about these businesses, so engines that assemble answers from written sources have nothing to assemble from.</p>
+
+<div class="whatnow"><div class="wn-label">What to do about it</div>
+<p><strong>Check which side of the wall you're on.</strong> Ask an AI assistant the question your customers would ask — not your name, the <em>need</em> ("best Japanese in Auckland for a date"). If you never come up, you're in the 60%.</p>
+<p><strong>Then fix authority before aesthetics.</strong> The invisible businesses aren't invisible because their sites are ugly — they're invisible because no list, review platform, or community thread mentions them. Getting written about is the way through the wall. Where those citations live per vertical is the subject of <a href="/blog/kingmaker-platforms/">Every vertical has a kingmaker</a>.</p></div>
+<div class="byline">SHELF ENGINEERING · ORIGINAL RESEARCH · PUBLISHED 30 JUNE 2026 · DATA COLLECTED JUNE–JULY 2026, AUCKLAND NZ<br>EVERY NUMBER CARRIES ITS DENOMINATOR AND SCOPE. IF YOU WANT THE RAW EVIDENCE BEHIND A CLAIM, <a href="mailto:hello@shelfengineering.com?subject=Research%20evidence">ASK US</a>.</div>
+    </article>
+
+  </div>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Which side of the wall are you on?</h2>
+      <p>We run this exact measurement for individual businesses — every engine, every query your customers actually ask, verbatim results.</p>
+      <a href="/for-businesses/" class="btn btn-primary">Request a shelf check →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span><span class="m">//</span><span class="w">/</span> SE</span>
+    <span>© 2026 Shelf Engineering</span>
+  </div>
+</footer>
+</body>
+</html>

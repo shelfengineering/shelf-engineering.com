@@ -16,12 +16,25 @@ In a supermarket, shelf placement determines what gets seen and bought — decad
 - [How it works](https://shelfengineering.com/how-it-works/): What agentic AI actually is, how an agent decides, what it can read, and where it came from
 - [Adoption](https://shelfengineering.com/adoption/): Chosen by some, shipped to everyone — how fast agentic AI is arriving, every stat sourced and dated
 - [For businesses](https://shelfengineering.com/for-businesses/): If an AI agent were asked about your business tomorrow, what would it find? Audit, fix, monitor
-- [Notes](https://shelfengineering.com/notes/): Longer-form writing and research on AI-mediated discovery
+- [Blog](https://shelfengineering.com/blog/): Longer-form writing and research on AI-mediated discovery
 - [Projects](https://shelfengineering.com/projects/): Things built with Claude — games, tools, and experiments
 - [Principles](https://shelfengineering.com/principles/): What shelf engineering means — the AI shelf metaphor, historical parallels, and our values
 - [How LLMs work](https://shelfengineering.com/how-llms-work/): Honest breakdown of LLM mechanics — training data vs. inference, what's known vs. unknown
 - [LLM Adoption data](https://shelfengineering.com/llm-adoption/): Research page with data, charts, and citations on the speed of LLM adoption
 - [About](https://shelfengineering.com/about/): Nicolas — founder, 8 years in AI, digital nomad, built Shelf Engineering to help people understand the shift
+
+## Research findings (original, Auckland field study, June–July 2026)
+
+We probed 679 Auckland businesses across 7 verticals against Gemini, OpenAI, Claude, and Apple Maps, and verified every venue by hand:
+
+- [The invisibility wall](https://shelfengineering.com/blog/invisibility-wall/): 60% of 537 real businesses were surfaced by no AI engine at all
+- [Schema won't save you](https://shelfengineering.com/blog/schema-wont-save-you/): structured data was rare (13%) and didn't predict AI visibility; editorial and community citations did
+- [Every vertical has a kingmaker](https://shelfengineering.com/blog/kingmaker-platforms/): one platform per trade (Fresha, booking layers, NoCowboys) quietly decides who agents can see
+- [Four engines, four realities](https://shelfengineering.com/blog/four-engines-four-realities/): each engine family reads a different source diet; Siri's layer is blind outside food and retail
+- [The shelf reshuffles on every ask](https://shelfengineering.com/blog/the-shelf-reshuffles/): identical queries return different lists; only a small stable core persists
+- [Your platform is already talking to agents](https://shelfengineering.com/blog/your-platform-speaks-for-you/): Shopify auto-ships llms.txt steering agents to its own commerce skill
+- [Nobody is blocking the agents](https://shelfengineering.com/blog/nobody-is-blocking-the-agents/): only 28 of 679 sites deny AI crawlers — invisibility is an authority problem, not access
+- [AI agents recommend ghosts](https://shelfengineering.com/blog/agents-recommend-ghosts/): closures and stale listings in every vertical, and engines cite them anyway
 
 ## Projects
 

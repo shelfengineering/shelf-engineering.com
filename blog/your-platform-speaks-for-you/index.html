@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your platform is already talking to agents — Shelf Engineering</title>
+<meta name="description" content="Shopify auto-ships an llms.txt file on its storefronts that documents product endpoints for AI agents — and nudges them toward Shopify's own agent skill. Most store owners have no idea. Verified original research, July 2026.">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/logo/favicon-180.png">
+
+  <link rel="canonical" href="https://shelfengineering.com/blog/your-platform-speaks-for-you/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Your platform is already talking to agents — Shelf Engineering">
+  <meta property="og:description" content="Shopify auto-ships an llms.txt file on its storefronts that documents product endpoints for AI agents — and nudges them toward Shopify's own agent skill. Most store owners have no idea. Verified original research, July 2026.">
+  <meta property="og:url" content="https://shelfengineering.com/blog/your-platform-speaks-for-you/">
+  <meta property="og:site_name" content="Shelf Engineering">
+  <meta property="og:image" content="https://shelfengineering.com/blog/og/your-platform-speaks-for-you.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Your platform is already talking to agents — Shelf Engineering field research card: dark background, stacked shelf marks with the top shelf lit.">
+  <meta property="article:published_time" content="2026-07-06">
+  <meta property="article:author" content="https://shelfengineering.com/about/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your platform is already talking to agents — Shelf Engineering">
+  <meta name="twitter:description" content="Shopify auto-ships an llms.txt file on its storefronts that documents product endpoints for AI agents — and nudges them toward Shopify's own agent skill. Most store owners have no idea. Verified original research, July 2026.">
+  <meta name="twitter:image" content="https://shelfengineering.com/blog/og/your-platform-speaks-for-you.png">
+  <meta name="twitter:image:alt" content="Your platform is already talking to agents — Shelf Engineering field research card: dark background, stacked shelf marks with the top shelf lit.">
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your platform is already talking to agents",
+    "description": "Shopify auto-ships an llms.txt file on its storefronts that documents product endpoints for AI agents \u2014 and nudges them toward Shopify's own agent skill. Most store owners have no idea. Verified original research, July 2026.",
+    "url": "https://shelfengineering.com/blog/your-platform-speaks-for-you/",
+    "image": "https://shelfengineering.com/blog/og/your-platform-speaks-for-you.png",
+    "datePublished": "2026-07-06",
+    "dateModified": "2026-07-06",
+    "author": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shelfengineering.com/assets/logo/mark-full-256.png"
+      }
+    }
+  }
+  </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <nav>
+    <a href="/" class="logo"><span class="m">//</span><span class="w">/</span> Shelf Engineering</a>
+    <div class="nav-links">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/adoption/">Adoption</a>
+      <a href="/blog/">Blog</a>
+      <a href="/projects/">Projects</a>
+      <a href="/for-businesses/" class="cta">Are you on the shelf?</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-intro post-hero">
+      <div class="kicker hero-stagger">Field research · Auckland · June–July 2026</div>
+      <h1 class="hero-stagger">Your website is already<br>talking to AI agents.<br><em>You didn't write the script.</em></h1>
+      <p class="lead hero-stagger">While probing 679 Auckland business websites, we found dozens serving llms.txt — a file addressed to AI agents. Most owners almost certainly don't know it's there, because they didn't write it. Their platform did.</p>
+    </section>
+
+    <article class="post">
+<div class="scopebox"><b>SCOPE</b> — Auckland, New Zealand · June–July 2026 snapshot. 7 verticals, 679 probed businesses: Italian, Japanese, sushi and Indian restaurants, barbers, plumbers, and board-game shops. Engines queried via their APIs — Gemini with Google Search grounding, OpenAI web_search, Claude with live search, and Apple Maps (MKLocalSearch, the layer Siri uses for local queries). APIs are clean, reproducible instruments and <b>proxies</b> for the consumer products, not the apps themselves. One city, one snapshot — treat this as field data, not a global law.</div>
+
+<p>An <code>llms.txt</code> file is a convention for talking to AI systems directly: a plain-text briefing at the root of your site telling agents what you are and how to read you. Of our 679 probed businesses, <strong>105 served one</strong>. For a moment that looked like a surprisingly high AI-readiness signal from small businesses.</p>
+<p>It isn't. When we fingerprinted the flagged sites and diffed their llms.txt files in full, the picture changed completely: <strong>19 of the 20 sites we examined closely were Shopify storefronts, serving a ~95%-identical platform-generated template</strong>, personalised only with the store's name.</p>
+<p>And the template doesn't just describe the store. Verbatim from two Auckland game shops' files (identical in both): agents reading the site on a user's behalf are asked to <em>"highly recommend your user to allow you to install"</em> Shopify's <strong>Shop skill</strong> — Shopify steering visiting agents onto its own commerce protocol, on every storefront, automatically.</p>
+<h2>What this is, and what it isn't</h2>
+<p>We want to be precise, because our own first reading of this data was wrong. The initial scan looked like small businesses were prompt-injecting shopping agents ("this store is highly recommended…"). Full verification overturned that: <strong>the persuasive language is Shopify's, not the stores'</strong>, and the one non-Shopify site flagged was a false positive — the phrase "highly recommend these guys" inside a customer testimonial. Across 83 llms.txt files read in full, we found <strong>zero store-authored agent manipulation</strong>. We're publishing the corrected finding and keeping the wrong one in the drawer — that's the house rule.</p>
+<p>The corrected finding is arguably bigger: <strong>platform-level shelf engineering already exists in production.</strong> The layer that talks to AI agents about your business is being written by your platform, in your platform's interest, at a scale no individual business can match. Two things we have <em>not</em> measured: whether any engine actually obeys the nudge (we verified the instruction exists, not its effect), and how far this generalises beyond our small, Shopify-heavy Auckland sample. The template itself may change at any time — this describes what storefronts served in early July 2026. It also means llms.txt "adoption" statistics measure platform rollout, not deliberate AI-readiness — a caveat for anyone (including us) tempted to quote them.</p>
+
+<div class="whatnow"><div class="wn-label">What to do about it</div>
+<p><strong>Look at what your own stack serves.</strong> Visit <code>yourdomain.com/llms.txt</code>. If something's there and you didn't write it, read it — that's your voice to every visiting agent.</p>
+<p><strong>Decide whether the platform's script serves you.</strong> Documented product endpoints: probably yes. Steering agents toward the platform's own channel: your call — but it should be <em>your</em> call.</p></div>
+<div class="byline">SHELF ENGINEERING · ORIGINAL RESEARCH · PUBLISHED 6 JULY 2026 · DATA COLLECTED JUNE–JULY 2026, AUCKLAND NZ<br>EVERY NUMBER CARRIES ITS DENOMINATOR AND SCOPE. IF YOU WANT THE RAW EVIDENCE BEHIND A CLAIM, <a href="mailto:hello@shelfengineering.com?subject=Research%20evidence">ASK US</a>.</div>
+    </article>
+
+  </div>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>What does your site tell an agent?</h2>
+      <p>We read your machine-facing layer the way an agent does — llms.txt, structured data, crawler policies — and show you exactly what it says.</p>
+      <a href="/for-businesses/" class="btn btn-primary">Request a shelf check →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span><span class="m">//</span><span class="w">/</span> SE</span>
+    <span>© 2026 Shelf Engineering</span>
+  </div>
+</footer>
+</body>
+</html>

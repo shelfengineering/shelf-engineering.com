@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nobody is blocking the agents — Shelf Engineering</title>
+<meta name="description" content="Of 679 Auckland business sites probed, only 28 deny AI crawlers in robots.txt and only 19 blocked an actual AI fetch. Small businesses are open to AI — they're just not being talked about. Original research, June 2026.">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/logo/favicon-180.png">
+
+  <link rel="canonical" href="https://shelfengineering.com/blog/nobody-is-blocking-the-agents/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nobody is blocking the agents — Shelf Engineering">
+  <meta property="og:description" content="Of 679 Auckland business sites probed, only 28 deny AI crawlers in robots.txt and only 19 blocked an actual AI fetch. Small businesses are open to AI — they're just not being talked about. Original research, June 2026.">
+  <meta property="og:url" content="https://shelfengineering.com/blog/nobody-is-blocking-the-agents/">
+  <meta property="og:site_name" content="Shelf Engineering">
+  <meta property="og:image" content="https://shelfengineering.com/blog/og/nobody-is-blocking-the-agents.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nobody is blocking the agents — Shelf Engineering field research card: dark background, stacked shelf marks with the top shelf lit.">
+  <meta property="article:published_time" content="2026-07-04">
+  <meta property="article:author" content="https://shelfengineering.com/about/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nobody is blocking the agents — Shelf Engineering">
+  <meta name="twitter:description" content="Of 679 Auckland business sites probed, only 28 deny AI crawlers in robots.txt and only 19 blocked an actual AI fetch. Small businesses are open to AI — they're just not being talked about. Original research, June 2026.">
+  <meta name="twitter:image" content="https://shelfengineering.com/blog/og/nobody-is-blocking-the-agents.png">
+  <meta name="twitter:image:alt" content="Nobody is blocking the agents — Shelf Engineering field research card: dark background, stacked shelf marks with the top shelf lit.">
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Nobody is blocking the agents",
+    "description": "Of 679 Auckland business sites probed, only 28 deny AI crawlers in robots.txt and only 19 blocked an actual AI fetch. Small businesses are open to AI \u2014 they're just not being talked about. Original research, June 2026.",
+    "url": "https://shelfengineering.com/blog/nobody-is-blocking-the-agents/",
+    "image": "https://shelfengineering.com/blog/og/nobody-is-blocking-the-agents.png",
+    "datePublished": "2026-07-04",
+    "dateModified": "2026-07-04",
+    "author": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shelf Engineering",
+      "url": "https://shelfengineering.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shelfengineering.com/assets/logo/mark-full-256.png"
+      }
+    }
+  }
+  </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <nav>
+    <a href="/" class="logo"><span class="m">//</span><span class="w">/</span> Shelf Engineering</a>
+    <div class="nav-links">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/adoption/">Adoption</a>
+      <a href="/blog/">Blog</a>
+      <a href="/projects/">Projects</a>
+      <a href="/for-businesses/" class="cta">Are you on the shelf?</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-intro post-hero">
+      <div class="kicker hero-stagger">Field research · Auckland · June–July 2026</div>
+      <h1 class="hero-stagger">The agents aren't<br>being blocked.<br>They're being ignored.</h1>
+      <p class="lead hero-stagger">A popular story says the web is walling itself off from AI crawlers. Among Auckland's small businesses, we found the opposite: the doors are wide open. Openness just turns out not to be the thing that gets you recommended.</p>
+    </section>
+
+    <article class="post">
+<div class="scopebox"><b>SCOPE</b> — Auckland, New Zealand · June–July 2026 snapshot. 7 verticals, 679 probed businesses: Italian, Japanese, sushi and Indian restaurants, barbers, plumbers, and board-game shops. Engines queried via their APIs — Gemini with Google Search grounding, OpenAI web_search, Claude with live search, and Apple Maps (MKLocalSearch, the layer Siri uses for local queries). APIs are clean, reproducible instruments and <b>proxies</b> for the consumer products, not the apps themselves. One city, one snapshot — treat this as field data, not a global law.</div>
+
+<p>You've read the headlines: publishers blocking GPTBot, robots.txt as the new battleground, the web going dark to AI. That may be true of large publishers. It is emphatically not what small-business websites look like from an agent's point of view.</p>
+<ul>
+<li>Of <strong>679 probed Auckland businesses</strong>, just <strong>28 deny any AI crawler</strong> in robots.txt.</li>
+<li>When we actually fetched each site the way an AI crawler would, only <strong>19 blocked the request</strong>.</li>
+<li>That's roughly <strong>96% of small-business sites fully open</strong> to AI systems — across restaurants, barbers, plumbers, and retail alike.</li>
+</ul>
+<p>The usual caveats apply: this is a June 2026 snapshot with one crawler user-agent tested per site — policies change, and a different bot might be treated differently. And the sample is small-business websites; large publishers blocking AI crawlers is real and well documented. This finding doesn't contradict that story — it just shows the story doesn't describe main street.</p>
+<p>So when 60% of these same businesses never surface in any AI engine's answers (<a href="/blog/invisibility-wall/">the invisibility wall</a>), access isn't the explanation. The engines could read almost everyone. They simply have no reason to: nothing they trust has written those businesses down.</p>
+<h2>Why this matters for the advice you're given</h2>
+<p>A lot of "AI readiness" consulting is access-flavoured — crawler permissions, technical SEO for bots, feeds and files. Necessary hygiene, occasionally decisive, but in our data the blocked-door case is rare (and sometimes accidental — a security service swatting bots the owner never configured). The binding constraint is upstream: <strong>authority, not access</strong>. An open door on a street nobody walks down.</p>
+<p>One nuance we did find worth checking on your own site: readability failures that <em>look</em> like content but read as nothing. About one site in eight across our restaurant runs was a JavaScript shell serving a nearly-empty page to a plain fetch. Those aren't blocked — they're mute. Different problem, same result.</p>
+
+<div class="whatnow"><div class="wn-label">What to do about it</div>
+<p><strong>Spend five minutes on hygiene:</strong> confirm your robots.txt isn't accidentally denying AI crawlers, and that your key pages render actual text without JavaScript. For roughly 96% of you, this is already fine.</p>
+<p><strong>Then stop optimising the door and work on the street.</strong> Citations in sources engines trust are what generate visits from agents — that's where the invisible 60% and the visible 40% actually differ in our data.</p></div>
+<div class="byline">SHELF ENGINEERING · ORIGINAL RESEARCH · PUBLISHED 4 JULY 2026 · DATA COLLECTED JUNE–JULY 2026, AUCKLAND NZ<br>EVERY NUMBER CARRIES ITS DENOMINATOR AND SCOPE. IF YOU WANT THE RAW EVIDENCE BEHIND A CLAIM, <a href="mailto:hello@shelfengineering.com?subject=Research%20evidence">ASK US</a>.</div>
+    </article>
+
+  </div>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Open door, empty street?</h2>
+      <p>A shelf check tells you which problem you actually have — access, readability, or authority — instead of guessing.</p>
+      <a href="/for-businesses/" class="btn btn-primary">Request a shelf check →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span><span class="m">//</span><span class="w">/</span> SE</span>
+    <span>© 2026 Shelf Engineering</span>
+  </div>
+</footer>
+</body>
+</html>

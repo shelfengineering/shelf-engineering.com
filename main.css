@@ -308,3 +308,69 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0}
   .hero{padding-top:4.5rem}
   section{padding:4rem 0}
 }
+
+/* ── blog article ── */
+.post{max-width:720px;margin:0 auto;padding:0 0 2rem}
+.post p{margin:0 0 1.35rem;color:var(--text);font-weight:300;font-size:1.03rem;line-height:1.75}
+.post h2{font-family:var(--font-display);font-weight:400;font-size:1.75rem;color:var(--text-bright);letter-spacing:-.01em;margin:2.8rem 0 1.1rem;line-height:1.2}
+.post ul,.post ol{margin:0 0 1.35rem 1.25rem}
+.post li{margin-bottom:.55rem;color:var(--text);font-weight:300;font-size:1.01rem}
+.post strong{color:var(--text-bright);font-weight:500}
+.post a{color:var(--cyan);text-decoration:none;border-bottom:1px solid var(--cyan-muted);transition:border-color .3s}
+.post a:hover{border-color:var(--cyan)}
+.scopebox{font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);border:1px solid var(--border);border-left:2px solid var(--cyan-muted);border-radius:3px;padding:1.1rem 1.3rem;margin:0 0 2.6rem;letter-spacing:.02em;line-height:1.95}
+.scopebox b{color:var(--cyan);font-weight:400}
+.post table{width:100%;border-collapse:collapse;margin:1.8rem 0;font-size:.86rem}
+.post th{font-family:var(--font-mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--border-hover);font-weight:400}
+.post td{padding:.6rem .7rem;border-bottom:1px solid var(--border);color:var(--text);font-weight:300}
+.post td.num{font-family:var(--font-mono);font-size:.8rem;color:var(--cyan)}
+.post td.num.dim{color:var(--text-dim)}
+.whatnow{border-left:2px solid var(--green);background:var(--green-dim);padding:1.5rem 1.7rem;border-radius:3px;margin:3rem 0 0}
+.whatnow .wn-label{font-family:var(--font-mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.14em;color:var(--green);margin-bottom:.8rem}
+.whatnow p{margin-bottom:.9rem}
+.whatnow p:last-child{margin-bottom:0}
+.byline{font-family:var(--font-mono);font-size:.66rem;color:var(--text-dim);letter-spacing:.06em;margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--border);line-height:2}
+.post-hero .lead{max-width:680px}
+
+/* blog index: meta cell with date */
+.note-row .nmeta{display:flex;flex-direction:column;gap:.35rem}
+.note-row .ndate{font-family:var(--font-mono);font-size:.6rem;color:var(--text-dim);letter-spacing:.08em}
+
+/* ── skeptic box (honest limitations, amber = the caveat color) ── */
+.skeptic{border-left:2px solid var(--amber-muted);background:var(--amber-dim);padding:1.5rem 1.7rem;border-radius:3px;margin:3rem 0 0}
+.skeptic .sk-label{font-family:var(--font-mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;color:var(--amber);margin-bottom:.9rem}
+.skeptic ul{margin:0 0 0 1.15rem}
+.skeptic li{margin-bottom:.65rem;color:var(--text);font-weight:300;font-size:.95rem}
+.skeptic li:last-child{margin-bottom:0}
+.skeptic a{color:var(--cyan);text-decoration:none;border-bottom:1px solid var(--cyan-muted)}
+
+/* ── accessibility ── */
+/* keyboard focus must be visible everywhere */
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:3px}
+/* inline code in articles */
+.post code{font-family:var(--font-mono);font-size:.86em;background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:.1em .4em;color:var(--text-bright)}
+/* contrast bumps: --text-dim (#4e5c6a) fails 4.5:1 on the page background at small sizes */
+.byline{color:var(--text-muted);font-size:.7rem}
+.post th{color:var(--text-muted);font-size:.68rem}
+.post td.num.dim{color:var(--text-muted)}
+.scopebox{color:var(--text-muted);font-size:.74rem}
+.note-row .ndate{color:var(--text-muted);font-size:.64rem}
+.note-row .arrow{color:var(--text-muted)}
+
+/* ── hero shelf unit: the /// as stacked shelves, top one lit ── */
+.hero{position:relative}
+.shelf-unit{position:absolute;right:0;top:6.5rem;width:min(300px,24vw);opacity:0;animation:heroRise .8s cubic-bezier(.2,.7,.2,1) .5s forwards}
+.shelf-unit svg{display:block;width:100%;height:auto}
+.shelf-unit .cap{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;color:var(--text-muted);margin-top:.6rem;text-align:right}
+.shelf-unit path{stroke-dasharray:200;stroke-dashoffset:200;animation:shelfDraw .8s cubic-bezier(.3,.6,.2,1) forwards}
+.shelf-unit path:nth-child(5){animation-delay:.55s}
+.shelf-unit path:nth-child(4){animation-delay:.7s}
+.shelf-unit path:nth-child(3){animation-delay:.85s}
+.shelf-unit path:nth-child(2){animation-delay:1s}
+.shelf-unit path:nth-child(1){animation-delay:1.2s}
+@keyframes shelfDraw{to{stroke-dashoffset:0}}
+@media (max-width:1020px){.shelf-unit{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .shelf-unit{opacity:1;animation:none}
+  .shelf-unit path{stroke-dasharray:none!important;stroke-dashoffset:0!important;animation:none}
+}
