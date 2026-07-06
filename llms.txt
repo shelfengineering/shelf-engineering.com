@@ -25,10 +25,14 @@ In a supermarket, shelf placement determines what gets seen and bought — decad
 
 ## Projects
 
-- Behaviour Book (https://behaviourbook.shelfengineering.com): Free, private behaviour tracking for AU & NZ primary school teachers
-- VoicedRPG (https://voicedrpg.shelfengineering.com): A voice-acted narrative RPG engine built across eight iterations — playable now, with v1–v7 kept live as an evolution showcase
 - Homepage Panda (https://homepagepanda.com): A macOS editor for your iPhone home screen — no jailbreak
+- Behaviour Book (https://behaviourbook.shelfengineering.com): Free, private behaviour tracking for AU & NZ primary school teachers
+- Parchment (https://parchment-character-sheets.netlify.app): Role-playing character sheets — offline, in the browser, nothing leaves the device
 - Sideways Dojo (https://sideways-horizontal-tetris.netlify.app): An 80s martial-arts Tetris duel with sideways gravity
+- Creature Collector (https://creature-collector.netlify.app): A Pokémon-inspired creature collector with all visuals AI-generated, built with Claude Fable 5
+- Battle Grid (https://battle-grid-original.netlify.app): Wave-survival auto-battler — zero code written by hand, iterated over a month
+- Battle Grid Rebuild (https://battle-grid-rebuild.netlify.app): The original scoped and rebuilt from scratch by Claude Opus via remote, loop-built development
+- VoicedRPG (https://voicedrpg.shelfengineering.com): A voice-acted narrative RPG engine built across eight iterations — playable now, with v1–v7 kept live as an evolution showcase
 
 ## Values
 
